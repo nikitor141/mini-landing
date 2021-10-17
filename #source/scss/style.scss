@@ -1,0 +1,94 @@
+@import "reset.scss";
+$font-color: #273d46;
+body {
+   background: url('../img/background/bg.png') no-repeat 55% -80% #e8e8e8 ;
+}
+.content {
+   max-width: 842px;
+   padding: 126px 0;
+   margin: 0 auto;
+}
+// h2 и h1 text-align в content-top
+// h1 margin в content-top
+// h2 убрать line-height и поставить margin (15px)
+// h1 решить перенос можно br или max-width и margin, но br это лишний html тег
+.content__h2 {
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 40px;
+   letter-spacing: .2em;
+   text-transform: uppercase;
+   color: #273d46;
+   opacity: .6;
+   text-align: center;
+}
+.content__h1 {
+   line-height: 50px;
+   font-size: 36px;
+   color: #273d46;
+   text-align: center;
+   margin: 0 0 60px 0;
+}
+.content__img {
+   width: 100%;
+   border: 10px solid white;  
+   box-shadow: 0 0 65px rgb(15, 16, 16, .15);
+   margin: 0 0 80px 0;
+}
+.wrapper {
+   max-width: 750px;
+   margin: 0 auto;
+}
+.content__p {
+   line-height: 40px;
+   font-size: 24px;
+   color: $font-color;
+   opacity: .8;
+   margin-bottom: 45px;
+}
+.content__list {
+   margin-bottom: 60px;
+   li{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      background: url('../img/icons/check-icon.png') no-repeat left top;
+      margin: 0 0 10px;
+      padding: 0 0 0 35px;
+   }
+}
+.content__list-item_shdw {
+   color: $font-color;
+   text-shadow: 1px 1px rgb(0, 0, 0, .3);
+}
+.content__list-item_obq {
+   color: #80b7b3;
+   font-style: oblique;
+}
+.content__list-item_bold {
+   color: $font-color;
+   font-weight: bold;
+}
+.content__list-item_lt {
+   color: rgb(39, 61, 70, .3);
+   text-decoration: line-through;
+}
+.content__btn {
+   //кнопка-ссылка
+   display: flex;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+ 
+
+   width: 200px;
+   height: 45px;
+   padding-right: 25px;
+   border-radius: 23px;
+   background: url('../img/icons/btn-arrow.svg') no-repeat 85% center #80b7b3;
+   box-shadow: 0px 6px 40px #80b7b3;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   letter-spacing: .2em;
+   text-transform: uppercase;
+   color: white;
+
+}
