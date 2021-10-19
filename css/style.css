@@ -73,12 +73,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
-  background: url("../img/background/bg.png") no-repeat 55% -80% #e8e8e8;
+  background: url("../img/background/bg.png") no-repeat 50% 130px #e8e8e8;
 }
 
 .content {
-  max-width: 842px;
-  padding: 126px 0;
+  max-width: 841px;
+  padding: 168px 0;
   margin: 0 auto;
 }
 
@@ -118,7 +118,7 @@ body {
   font-size: 24px;
   color: #273d46;
   opacity: 0.8;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .content__list {
@@ -139,7 +139,7 @@ body {
 
 .content__list-item_obq {
   color: #80b7b3;
-  font-style: oblique;
+  font-style: italic;
 }
 
 .content__list-item_bold {

@@ -1,11 +1,11 @@
 @import "reset.scss";
 $font-color: #273d46;
 body {
-   background: url('../img/background/bg.png') no-repeat 55% -80% #e8e8e8 ;
+   background: url('../img/background/bg.png') no-repeat 50% 130px #e8e8e8 ;
 }
 .content {
-   max-width: 842px;
-   padding: 126px 0;
+   max-width: 841px;
+   padding: 168px 0;
    margin: 0 auto;
 }
 // h2 и h1 text-align в content-top
@@ -28,25 +28,39 @@ body {
    text-align: center;
    margin: 0 0 60px 0;
 }
+// box-shadow 0 15px 65px
+// он сделал границу с помощью background и padding
+// div img max-widht: 100%; Чтобы можно было вставить картинку любой ширины и она не ломала верстку
+// у него margin 85px почему-то
+// что-то не то с размерами картинки (растянута по высоте)
 .content__img {
    width: 100%;
    border: 10px solid white;  
    box-shadow: 0 0 65px rgb(15, 16, 16, .15);
    margin: 0 0 80px 0;
 }
+//content-bottom padding 0 45px вместо margin
 .wrapper {
    max-width: 750px;
    margin: 0 auto;
 }
+// content-bottom__text margin-bottom ?
+// везде где в тексте opacity можно оптимизировать выбрав фактический цвет текста в редакторе
+// content-bottom__text p
+// last-child margin 0
 .content__p {
    line-height: 40px;
    font-size: 24px;
    color: $font-color;
    opacity: .8;
-   margin-bottom: 45px;
+   margin-bottom: 40px;
 }
+//content-bottom-info__list li:last-child margin 0
 .content__list {
    margin-bottom: 60px;
+   // галочки через background или через ::before, ::after, еще наверное можно list style
+   // background нельзя анимировать, лучше псевдо
+   // просто left без top
    li{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
@@ -55,22 +69,30 @@ body {
       padding: 0 0 0 35px;
    }
 }
+//text-shadow: 0 1px
 .content__list-item_shdw {
    color: $font-color;
    text-shadow: 1px 1px rgb(0, 0, 0, .3);
 }
 .content__list-item_obq {
    color: #80b7b3;
-   font-style: oblique;
+   font-style: italic;
 }
 .content__list-item_bold {
    color: $font-color;
    font-weight: bold;
 }
+// opacity в span, обернуть элемент
+//можно пипеткой цвет выбрать без span или как сделал я
 .content__list-item_lt {
    color: rgb(39, 61, 70, .3);
    text-decoration: line-through;
 }
+// box-shadow rgba
+// paffing: 0 30px
+//display inline-block потому что block разъедится на всю ширину, он не использвет width, а размер соответствует контенту + padding
+// line-height = height ибо некоторые шрифты могут не встать посередине нормально
+
 .content__btn {
    //кнопка-ссылка
    display: flex;
@@ -81,7 +103,7 @@ body {
 
    width: 200px;
    height: 45px;
-   padding-right: 25px;
+   padding-right: 25px; 
    border-radius: 23px;
    background: url('../img/icons/btn-arrow.svg') no-repeat 85% center #80b7b3;
    box-shadow: 0px 6px 40px #80b7b3;
