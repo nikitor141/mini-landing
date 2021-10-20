@@ -11,36 +11,41 @@
 
 <body>
     <main class="content">
-        <!-- content-top -->
-        <h2 class="content__h2">Travel</h2>
-        <h1 class="content__h1">Donec sed odio dui. Cras mattis consectetur purus sit amet ferm</h1>
-        <!-- img в 2 div`а можно как я понял div img, он привык в 2 div -->
-        <!--позже он понял что 2 див лишний и убрал его  -->
-        <img src="img/content/light-man.jpg" srcset="
-        img/content/light-man.jpg,
-        img/content/light-man-2x.jpg 2x,
-        img/content/light-man-3x.jpg 3x
-        " alt="man" class="content__img">
-        <!-- content-bottom -->
-        <div class="wrapper">
-            <!-- p в content-text -->
-            <p class="content__p">Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor
-                fringilla.</p>
-            <p class="content__p">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean
-                eu
-                leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            <!-- ul в div -->
-            <ul class="content__list">
-                <!-- к каждому li через псевдоклассы -->
-                <li class="content__list-item_shdw">Put on this page information about your product
-                </li>
-                <li class="content__list-item_obq">A detailed description of your product</li>
-                <li class="content__list-item_bold">Tell us about the advantages and merits</li>
-                <li class="content__list-item_lt">Associate the page with the payment system</li>
+        <div class="content-top">
+            <h2 class="content-top__h2">Travel</h2>
+            <h1 class="content-top__h1">Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</h1>
+
+        </div>
+        <div class="content__img">
+            <img src="img/content/light-man.jpg" srcset="
+            img/content/light-man.jpg,
+            img/content/light-man-2x.jpg 2x,
+            img/content/light-man-3x.jpg 3x
+            " alt="man">
+        </div>
+
+        <div class="content-bottom">
+            <div class="content-bottom__text">
+                <p>Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac,
+                    vestibulum at
+                    eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non
+                    metus auctor fringilla.</p>
+                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                    vestibulum.
+                    Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+            </div>
+            <!-- ul и a в div -->
+            <ul class="content-bottom__list">
+                <li>Put on this page information about your product</li>
+                <li>A detailed description of your product</li>
+                <li>Tell us about the advantages and merits</li>
+                <li>Associate the page with the payment system</li>
             </ul>
             <!-- в a span для текста если вижу иконку и иконку bg в span-->
-            <a target="_blank" href="https://google.com" class="content__btn">Full story</a>
+            <a target="_blank" href="https://google.com" class="content-bottom__link">
+                <span>Full story</span>
+            </a>
         </div>
     </main>
 </body>

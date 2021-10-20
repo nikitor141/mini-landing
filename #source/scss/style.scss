@@ -5,112 +5,92 @@ body {
 }
 .content {
    max-width: 841px;
-   padding: 168px 0;
+   padding: 168px 0 137px;
    margin: 0 auto;
 }
-// h2 и h1 text-align в content-top
-// h1 margin в content-top
-// h2 убрать line-height и поставить margin (15px)
-// h1 решить перенос можно br или max-width и margin, но br это лишний html тег
-.content__h2 {
+.content-top {
+   text-align: center;
+   margin: 0 auto 60px;
+   max-width: 725px;
+   color: #273d46;
+}
+.content-top__h2 {
    font-family: Arial, Helvetica, sans-serif;
-   line-height: 40px;
+   margin: 0 0 15px 0;
    letter-spacing: .2em;
    text-transform: uppercase;
-   color: #273d46;
    opacity: .6;
-   text-align: center;
 }
-.content__h1 {
+.content-top__h1 {
    line-height: 50px;
    font-size: 36px;
-   color: #273d46;
-   text-align: center;
-   margin: 0 0 60px 0;
 }
-// box-shadow 0 15px 65px
-// он сделал границу с помощью background и padding
-// div img max-widht: 100%; Чтобы можно было вставить картинку любой ширины и она не ломала верстку
-// у него margin 85px почему-то
-// что-то не то с размерами картинки (растянута по высоте)
 .content__img {
-   width: 100%;
    border: 10px solid white;  
-   box-shadow: 0 0 65px rgb(15, 16, 16, .15);
-   margin: 0 0 80px 0;
+   box-shadow: 0 15px 65px rgb(15, 16, 16, .15);
+   margin: 0 0 85px 0;
+   img {
+      max-width: 100%;
+   }
 }
-//content-bottom padding 0 45px вместо margin
-.wrapper {
-   max-width: 750px;
-   margin: 0 auto;
+.content-bottom {
+   padding: 0 45px;
 }
 // content-bottom__text margin-bottom ?
 // везде где в тексте opacity можно оптимизировать выбрав фактический цвет текста в редакторе
-// content-bottom__text p
-// last-child margin 0
-.content__p {
+.content-bottom__text {
    line-height: 40px;
    font-size: 24px;
    color: $font-color;
    opacity: .8;
-   margin-bottom: 40px;
+   margin: 0 0 51px 0;
+   p:not(:last-child) {
+      margin-bottom: 40px;
+   }
 }
-//content-bottom-info__list li:last-child margin 0
-.content__list {
+.content-bottom__list {
    margin-bottom: 60px;
-   // галочки через background или через ::before, ::after, еще наверное можно list style
-   // background нельзя анимировать, лучше псевдо
-   // просто left без top
    li{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
-      background: url('../img/icons/check-icon.png') no-repeat left top;
-      margin: 0 0 10px;
+      background: url('../img/icons/check-icon.png') no-repeat left;
       padding: 0 0 0 35px;
+      &:not(:last-child){
+         margin: 0 0 15px;
+      }
+      &:nth-child(1){
+         color: $font-color;
+         text-shadow: 0px 1px rgb(0, 0, 0, .3);
+      }
+      &:nth-child(2) {
+         color: #80b7b3;
+         font-style: italic;
+      }
+      &:nth-child(3) {
+         color: $font-color;
+         font-weight: bold;
+      }
+      &:nth-child(4) {
+         color: rgb(39, 61, 70, .3);
+         text-decoration: line-through;
+      }
    }
 }
-//text-shadow: 0 1px
-.content__list-item_shdw {
-   color: $font-color;
-   text-shadow: 1px 1px rgb(0, 0, 0, .3);
-}
-.content__list-item_obq {
-   color: #80b7b3;
-   font-style: italic;
-}
-.content__list-item_bold {
-   color: $font-color;
-   font-weight: bold;
-}
-// opacity в span, обернуть элемент
-//можно пипеткой цвет выбрать без span или как сделал я
-.content__list-item_lt {
-   color: rgb(39, 61, 70, .3);
-   text-decoration: line-through;
-}
-// box-shadow rgba
-// paffing: 0 30px
-//display inline-block потому что block разъедится на всю ширину, он не использвет width, а размер соответствует контенту + padding
-// line-height = height ибо некоторые шрифты могут не встать посередине нормально
-
-.content__btn {
-   //кнопка-ссылка
-   display: flex;
-   text-align: center;
-   align-items: center;
-   justify-content: center;
- 
-
-   width: 200px;
+.content-bottom__link {
+   display: inline-block;
    height: 45px;
-   padding-right: 25px; 
+   padding: 0 30px;
    border-radius: 23px;
-   background: url('../img/icons/btn-arrow.svg') no-repeat 85% center #80b7b3;
-   box-shadow: 0px 6px 40px #80b7b3;
+   background-color: #80b7b3;
+   box-shadow: 0px 6px 40px rgba(128, 183, 179, 0.54);
    font-family: Arial, Helvetica, sans-serif;
    font-size: 14px;
-   letter-spacing: .2em;
+   line-height: 45px;
+   letter-spacing: .2em;   
    text-transform: uppercase;
    color: white;
-
+   span {
+      padding: 0 26px 0 0;
+      background: url('../img/icons/btn-arrow.svg') no-repeat right;
+   }
 }
